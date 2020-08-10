@@ -15,6 +15,8 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  height: 100%;
+  width: 100%;
 }
 
 /*
@@ -87,8 +89,29 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  max-width: 1200px;
+  background:	#202322;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+.content-wrapper {
+  width: 90%;
+  margin: 10px 0;
+}
 /* Header and Footer Base Styles */
-
 header,
 footer {
   display: flex;
@@ -96,28 +119,61 @@ footer {
   align-items: center;
   flex-flow: row wrap;
 }
+header {
+  padding: 15px 0;
+}
+header img {
+  width: 100%;
+}
 
 header .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 0;
 }
-
+.header-divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0px 0px;
+  border-bottom: 1px solid grey;
+}
 header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+  width: 60%;
 }
 
 header nav ul {
   display: flex;
   justify-content: space-around;
+  width: 100%;
   list-style: none;
-  
+  font-size: 1.125em;
+  font-family: 'Open Sans', sans-serif;
 }
 
+/* footer */
+footer {
+  background: #202322;
+  width: 100%;
+}
+
+footer h2 {
+  text-align: center;
+  font-size: 1em;
+}
+footer p {
+  text-align: center;
+  font-size: 0.875em;
+  margin: 0px;
+}
+footer .social {
+  padding:20px 0 0;
+}
 footer .social-icons {
   display: flex;
   justify-content: space-around;
@@ -129,68 +185,143 @@ footer .social-icons p {
   justify-content: center;
   align-items: center;
 }
-
-/* Mobile Styles for Homepage */
+/* hero area  */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
+  background: url('../img/jake-melara-30679-unsplash.jpg') bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-/* .hero .content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
+
+.hero .content-wrapper {
+  height: 350px;
+}
+.hero h1 {
+  font-size: 2.25em;
+  margin: 10px 0 0;
+}
+
+/* aside style */
 aside {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background:#25744d;
 }
-
+aside h3 {
+  font-size: 1.125em;
+  padding: 10px 0 0px 0;
+  margin: 0px 0 0;
+}
+aside p {
+  font-size: 0.875em;
+  line-height: 1.125em;
+}
+/* features */
 .features {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-
+  background: url('../img/rawpixel-800820-unsplash1.jpg');
+  background-position: center;
+  background-size: cover;
 }
-
+.features-items {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
 .features .features-items {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: row wrap;
-
 }
+.features h2 {
+  font-size: 1.875em;
+  margin-bottom: 50px;
+}
+.features p {
+  margin: 0;
+}
+.features article {
+  width: 60%;
+  margin: 25px 0;
+}
+
+.features-item-description  {
+  font-size: 0.875em;
+  text-align: center;
+}
+
+/* Reviews */
 
 .reviews {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-
+  background:  #2a423a;
+  padding: 5px 0 10px;
 }
-
+.reviews h2 {
+  font-size: 1.875em;
+}
+.reviews h3 {
+  font-size: 1.125em;
+  width: 60%;
+}
+.reviews p {
+  font-size: 0.875em;
+}
 /* About page */
 .mission {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background: #527158;
+  padding: 10px 0 20px;
 }
-.mission .mission-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+.mission-content h1 {
+  font-size: 1.700em;
+  line-height: 1.125em;
+  padding-top: 10px;
+ 
+}
+.mission-content p {
+  font-size: 0.875em;
+  line-height: 1.2em;
+  font-family: 'Open Sans', sans-serif;
 }
 .contact-section {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background: #2a423a;
+  padding: 10px 0 10px;
 }
+.contact-section h1 {
+  font-size: 1.700em;
+  line-height: 1.125em;
+}
+.contact-section h3 {
+  font-size: 1.125em;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 0px;
 
+}
+.contact-section p {
+  font-size: 0.75em;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 0px;
+
+}
 /* FAQ page */
 
 .faq-section {
@@ -198,12 +329,29 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background: #527158;
 }
-.faq .content-wrapper {
+.faq-section .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 20px 0 0 0;
+}
+.faq-section h2 {
+  font-size: 1.875em;
+  margin-bottom: 30px;
+}
+.faq-section h3 {
+  font-size: 1.125em;
+  font-family: 'Open Sans', sans-serif;
+}
+.faq-section p {
+  font-size: 0.875em;
+  font-family: 'Open Sans', sans-serif;
+}
+.faq-part {
+  margin-bottom: 30px;
 }
 /* ==========================================================================
    Helper classes
