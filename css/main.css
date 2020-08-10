@@ -125,7 +125,6 @@ header {
 header img {
   width: 100%;
 }
-
 header .content-wrapper {
   display: flex;
   justify-content: center;
@@ -146,7 +145,6 @@ header nav {
   flex-flow: row wrap;
   width: 60%;
 }
-
 header nav ul {
   display: flex;
   justify-content: space-around;
@@ -156,7 +154,6 @@ header nav ul {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* footer */
 footer {
   background: #202322;
   width: 100%;
@@ -185,6 +182,8 @@ footer .social-icons p {
   justify-content: center;
   align-items: center;
 }
+
+/* Mobile style */
 /* hero area  */
 .hero {
   display: flex;
@@ -195,8 +194,6 @@ footer .social-icons p {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-
 .hero .content-wrapper {
   height: 350px;
 }
@@ -259,7 +256,6 @@ aside p {
 }
 
 /* Reviews */
-
 .reviews {
   display: flex;
   justify-content: center;
@@ -322,8 +318,8 @@ aside p {
   padding-top: 0px;
 
 }
-/* FAQ page */
 
+/* FAQ page */
 .faq-section {
   display: flex;
   justify-content: center;
@@ -441,10 +437,12 @@ aside p {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+ 
 }
+@media only screen and (min-width: 1200px) {
 
+}
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
