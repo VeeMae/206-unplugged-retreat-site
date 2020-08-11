@@ -822,10 +822,12 @@ input[type=button] {
     flex-flow: row wrap;
   }
   .mission .mission-content h1 {
-    width: 90%;
+    width: 95%;
+    font-size: 3em;
   }
   .mission-content p {
-    width: 40%;
+    width: 45%;
+    font-size: 1.125em;
   }
   .contact-section .content-wrapper {
     display: flex;
@@ -834,16 +836,35 @@ input[type=button] {
     flex-flow: row wrap;
     padding-bottom: 20px;
     padding-left: 100px;
-    padding-right: 0px;
+    padding-right: 60px;
     margin: 0px;
   }
   .contact-section h1 {
     width: 100%;
+    font-size: 3em;
+  }
+  .contact-section h3 {
+    font-size: 1.875em;
+  }
+  .contact-section p {
+    font-size: 1.125em;
   }
   .contact-section .information, .contact-section .facilitator-information {
     width: 50%;
   }
 
+  footer h2 {
+    font-size: 1.875em;
+  }
+  footer p {
+    font-size: 1.125em;
+  }
+  footer .content-wrapper {
+    width: 60%;
+    padding-bottom: 20px;
+  }
+  
+  
   /* ===== FAQ Page =====*/
     .faq-section .content-wrapper {
       display: flex;
@@ -862,10 +883,10 @@ input[type=button] {
     }
     .faq-part h2 {
       width: 100%;
-      font-size: 2.25em;
+      font-size: 3em;
     }
     .faq-part h3 {
-      font-size: 0.875em;
+      font-size: 1.125em;
     }
 }
 @media print,
