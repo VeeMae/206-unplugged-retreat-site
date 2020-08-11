@@ -90,23 +90,25 @@ textarea {
    ========================================================================== */
 /* Base Styles */
 html {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   height: 100%;
-  width: 100%;
+  width: 100%; */
   font-size: 16px;
 }
 body {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  max-width: 1200px;
-  background:	#202322;
-  color: white;
+  max-width: 1200px; */
+  /* background:	#202322; */
+  font-size: 1em;
+  color: #e2e3ed;
   font-family: 'Open Sans', sans-serif;
+  text-align: left;
 }
 ul,
 ol {
@@ -118,12 +120,14 @@ a {
 }
 h2 {
   font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   font-size: 1.875em;
 }
 h3, 
 h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.125em;
+  font-weight: 500;
 }
 p {
   font-size: 0.875em;
@@ -143,6 +147,7 @@ figure {
 /* Header and Footer Base Styles */
 header,
 footer {
+  background-color: #202322;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,10 +156,10 @@ footer {
 header {
   padding: 15px 30px;
 }
-header img {
+/* header img {
   width: 80%;
   padding: 10px 25px;
-}
+} */
 header .content-wrapper {
   display: flex;
   justify-content: center;
@@ -163,24 +168,33 @@ header .content-wrapper {
   margin: 0;
 }
 .header-divider {
+  background: #3a3a3a;
   width: 100%;
   height: 1px;
-  margin: 10px 0px 0px;
-  border-top: 1px solid grey;
+  margin: 10px 0 10px 0;
+  
 }
 header nav {
+  /* width: 30%; */
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
 }
 header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   list-style: none;
-  flex-flow: row nowrap;
   font-size: 1.125em;
   font-family: 'Open Sans', sans-serif;
+}
+header figure {
+  width: 80%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap; */
 }
 footer {
   background: #202322;
@@ -209,7 +223,9 @@ footer .social-icons p {
   justify-content: center;
   align-items: center;
 }
-
+footer .copyright {
+  padding: 20px 0;
+}
 /* ====== Mobile Styles ====== */
 
 /* hero seciton */
@@ -218,8 +234,9 @@ footer .social-icons p {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background: url('../img/jake-melara-30679-unsplash.jpg') center;
+  background: url('../img/jake-melara-30679-unsplash.jpg');
   background-size: cover;
+  background-position: center;
 }
 .hero .content-wrapper {
   height: 400px;
@@ -227,6 +244,8 @@ footer .social-icons p {
 .hero h1 {
   font-size: 2.25em;
   margin: 10px 0 0;
+  line-height: 1em;
+  
 }
 
 /* aside section */
@@ -237,9 +256,9 @@ aside {
   flex-flow: row wrap;
   background:#527158;
 }
-aside .content-wrapper {
+/* aside .content-wrapper {
   height: 330px;
-}
+} */
 aside h3 {
   font-size: 1.125em;
   padding: 20px 0 0px 0;
@@ -250,7 +269,8 @@ aside p {
   line-height: 1.125em;
 }
 aside .form {
-  margin-top: 30px;
+  margin-top: 0px;
+  margin-bottom: 15px;
 }
  
 input[type=text] {
@@ -294,7 +314,8 @@ input[type=button] {
   flex-flow: row wrap;
 }
 .features h2 {
-  font-size: 1.875em;
+  font-size: 1.750em;
+  font-weight: 500;
   margin-bottom: 50px;
 }
 .features p {
@@ -302,7 +323,7 @@ input[type=button] {
 }
 .features article {
   width: 60%;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 .features-item-description  {
   font-size: 0.875em;
@@ -318,14 +339,16 @@ input[type=button] {
   padding: 5px 0 10px;
 }
 .reviews h2 {
-  font-size: 1.875em;
+  font-size: 1.750em;
+  font-weight: 500;
 }
 .reviews h3 {
   font-size: 1.125em;
   width: 60%;
 }
 .reviews p {
-  font-size: 0.875em;
+  font-size: 0.750em;
+  font-weight: 400;
 }
 
 
@@ -340,15 +363,20 @@ input[type=button] {
   background: #527158;
   padding: 10px 0 20px;
 }
-.mission-content h1 {
-  font-size: 1.700em;
+.mission-content h2 {
+  font-size: 1.650em;
   line-height: 1.125em;
   padding-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin: 0 0;
+
 }
 .mission-content p {
   font-size: 0.875em;
   line-height: 1.2em;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 
 /* contact section */
@@ -361,9 +389,10 @@ input[type=button] {
   background: #2a423a;
   padding: 10px 0 10px;
 }
-.contact-section h1 {
+.contact-section h2 {
   font-size: 1.700em;
-  line-height: 1.125em;
+  line-height: 1.1em;
+  font-weight: 400;
 }
 .contact-section h3 {
   font-size: 1.125em;
@@ -374,6 +403,7 @@ input[type=button] {
   font-size: 0.75em;
   font-family: 'Open Sans', sans-serif;
   padding-top: 0px;
+  margin: 0 0;
 }
 
 /* ===== FAQ Page =====*/
@@ -389,7 +419,7 @@ input[type=button] {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
 }
 .faq-section h2 {
   font-size: 1.875em;
@@ -503,8 +533,8 @@ input[type=button] {
   }
   header {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
     flex-flow: row nowrap;
   }
   header .content-wrapper {
@@ -512,35 +542,38 @@ input[type=button] {
     justify-content: space-between; 
   }
   .header-divider {
-    width: 100%;
-    height: 1px;
-    margin: 10px 0px 0px;
-    border: none;
-  }
-  header img {
-    width: 40%;
+    display: none;
   }
   header nav {
    width: 40%;
   }
-  .hero {
-    height: 600px;
+  header nav ul li {
+    font-size: 1em;
+    font-weight: 700;
   }
-  .hero h1 {
+  header figure {
+    width: 40%;
+  }
+  .hero {
+    min-height: 600px;
+  }
+  .hero h2 {
     font-size: 3em;
-    padding-top: 10px;
+    line-height: 1em;
+    padding-top: 0px;
     margin: 0 0;
   }
  /* aside section */
-  aside {
+  /* aside {
     height: 240px;
-  }
+  } */
   aside .content-wrapper {
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    width: 645px;
+    /* width: 645px; */
     margin: 20px 0 0;
+    padding-bottom: 30px;
   }
   aside .content-wrapper .form-description {
     width: 45%;
@@ -553,6 +586,7 @@ input[type=button] {
   aside h3 {
     font-size: 1.5em;
     font-family: 'Open Sans', sans-serif;
+    padding-bottom: 10px;
   }
   aside p {
     font-size: 0.875em;
@@ -560,7 +594,8 @@ input[type=button] {
   }
   /* features section */
   .features {
-    padding: 20px 0 30px;
+    padding: 10px 0 30px;
+    margin: 0;
   }
   .features article {
     display: flex;
@@ -569,33 +604,39 @@ input[type=button] {
     flex-flow: column wrap;
     flex-basis: 50%;
   }
+  .features h2 {
+    font-size: 2.25em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding-left: 30px;
+  }
   .features-item-description {
     width: 50%;
   }
   .features-item-description p { 
-    font-size: 0.750em;
+    font-size: 0.700em;
     font-family: 'Open Sans', sans-serif;
   }
 
   /* reviews section */
   .reviews {
-    padding: 40px 20px;
+    padding: 20px 20px;
     margin: 0px;
   }
   .reviews article {
     display: flex;
     justify-content: space-between;
-    /* flex-flow: row nowrap; */
   }
-  .reviews article p{
-    width: 45%;
+  .reviews article figure, .reviews article div {
+    width: 48%; 
   }
   .reviews h2 {
-    font-size: 2.25em;
+    font-size: 2.125em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
   }
   .reviews h3 {
-    font-size: 1.5em;
-    width: 65%;
+    font-size: 1.125em;
   }
   .reviews p {
     font-size: 0.875em;
@@ -626,29 +667,32 @@ input[type=button] {
 
   /* ===== ABOUT Page ===== */
   
-  .mission .content-wrapper .mission-content {
+  .mission-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-flow: row wrap;
+    padding: 20px 0;
   }
-  .mission .mission-content h1 {
-    width: 90%;
+  .mission .mission-content h2 {
+    font-size: 2em;
+    padding-bottom: 20px;
   }
   .mission-content p {
-    width: 40%;
+    width: 45%;
+    font-size: 0.875em;
   }
   .contact-section .content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     flex-flow: row wrap;
-    padding-bottom: 20px;
+    padding: 30px 0 50px;
     padding-left: 100px;
     padding-right: 0px;
     margin: 0px;
   }
-  .contact-section h1 {
+  .contact-section h2 {
     width: 100%;
   }
   .contact-section .information, .contact-section .facilitator-information {
@@ -658,13 +702,13 @@ input[type=button] {
   /* ===== FAQ Page =====*/
     .faq-section .content-wrapper {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: space-around;
+      align-items: stretch;
     }
     .faq-part {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: stretch;
       flex-flow: row wrap;
       padding: 40px 15px 60px; 
     }
@@ -678,91 +722,82 @@ input[type=button] {
     .faq-part h3 {
       font-size: 0.875em;
     }
-  
+    .faq-part p {
+      font-size: 0.750em;
+    }
 }
-
-
 @media only screen and (min-width: 1200px) {
-  .content-wrapper {
-    max-width: 970px;
-  }
   header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-flow: row nowrap;
-  }
-  header .content-wrapper {
-    width: 100%;
-    justify-content: space-between; 
-  }
-  .header-divider {
-    width: 100%;
-    height: 1px;
-    margin: 10px 0px 0px;
-    border: none;
-  }
-  header img {
-    width: 40%;
-  }
-  header nav {
-   width: 40%;
-  }
-  .hero {
-    height: 600px;
-  }
-  .hero h1 {
-    font-size: 3.75em;
-    padding-top: 5px;
-    margin: 0 0;
-  }
- /* aside section */
-  aside {
-    height: 240px;
-  }
-  aside .content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-    width: 800px;
-    margin: 20px 0 0;
-  }
-  aside .content-wrapper .form-description {
-    width: 40%;
-    margin: 0;
-    
-  }
-  aside .content-wrapper .form {
-    width: 40%;
-    margin: 0;
-  }
-  aside h3 {
-    font-size: 1.5em;
-    font-family: 'Open Sans', sans-serif;
-  }
-  aside p {
-    font-size: 0.875em;
-    font-family: 'Open Sans', sans-serif;
-  }
-  /* features section */
-  .features {
-    padding: 20px 0 30px;
-  }
-  .features h2 {
-    font-size: 2.25em;
-  }
-  .features article {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: row nowrap;
+    margin: 0;
+  }
+  .content-wrapper {
+    max-width: 1200px;
+  }
+  header figure {
+    width: 25%;
+  }
+  .header-divider {
+    border: none;
+  }
+  header nav {
+   width: 20%;
+  }
+
+  /* hero section */
+  .hero h2 {
+    font-size: 3.75em;
+    padding: 0px;
+    margin: 0 0;
+    width:60%;
+  }
+ /* aside section */
+  aside .content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    margin: 40px 0 30px;
+  }
+  aside .content-wrapper .form-description {
+    width: 30%;
+    margin: 0;
+    flex-flow: stretch;
+    
+  }
+  aside .content-wrapper .form {
+    width: 35%;
+    margin: 0;
+  }
+  aside h3 {
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+  }
+  aside p {
+    font-size: 1.125em;
+    font-family: 'Open Sans', sans-serif;
+  }
+  /* features section */
+  .features .content-wrapper{
+    padding: 40px 0 50px;
+  }
+  .features h2 {
+    font-size: 2.7em;
+    padding-left: 50px;
+
+  }
+  .features article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-flow: column wrap;
-    flex-basis: 33%;
+    flex-basis: 30%;
   }
-  .features-item-description {
-    width: 160px;
-  }
-  .features-item-description p { 
-    font-size: 0.750em;
+  article p { 
+    font-size: 1.125em;
+    line-height: 1.5em;
     font-family: 'Open Sans', sans-serif;
   }
 
@@ -773,84 +808,72 @@ input[type=button] {
   }
   .reviews article {
     display: flex;
-    justify-content: space-between;
-    /* flex-flow: row nowrap; */
+    justify-content: space-around; 
+    /* align-items: stretch; */
   }
-  .reviews article p{
-    width: 45%;
+  .reviews article div{
+    width: 47%;
   }
   .reviews h2 {
     font-size: 2.25em;
+    padding: 20px 0 50px 20px;
   }
   .reviews h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     width: 65%;
   }
   .reviews p {
-    font-size: 0.875em;
+    font-size: 1em;
     font-family: 'Open Sans', sans-serif;
   }
 
   /* footer section */
   footer .content-wrapper {
-    width: 600px;
-    margin: 40px 0 70px;
+    margin: 50px 0 70px;
   }
   .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-flow: row nowrap;
   }
-  footer .copyright {
-    width: 100%;
-    padding-bottom: 10px;
+  footer .contact, footer .social {
+    width: 30%;
   }
-  footer h2 {
-    font-size: 1.5em;
-  }
-  footer p {
-    font-size: 0.875em;
-  }
+  
 
   /* ===== ABOUT Page ===== */
   
-  .mission .content-wrapper .mission-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
+  .mission {
+    width: 100%;
+    padding: 50px 0;
   }
-  .mission .mission-content h1 {
+  .mission .mission-content h2 {
     width: 95%;
     font-size: 3em;
   }
   .mission-content p {
-    width: 45%;
+    width: 40%;
     font-size: 1.125em;
   }
-  .contact-section .content-wrapper {
+  .contact-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
-    flex-flow: row wrap;
-    padding-bottom: 20px;
-    padding-left: 100px;
-    padding-right: 60px;
-    margin: 0px;
+    flex-flow: row nowrap;
+    padding: 50px 0;
+    margin: 0 0;
   }
-  .contact-section h1 {
-    width: 100%;
+  .contact-section h2 {
     font-size: 3em;
   }
   .contact-section h3 {
-    font-size: 1.875em;
+    font-size: 1.85em;
   }
   .contact-section p {
     font-size: 1.125em;
   }
   .contact-section .information, .contact-section .facilitator-information {
     width: 50%;
+    margin: 0 0;
   }
 
   footer h2 {
@@ -860,7 +883,7 @@ input[type=button] {
     font-size: 1.125em;
   }
   footer .content-wrapper {
-    width: 60%;
+    width: 80%;
     padding-bottom: 20px;
   }
   
@@ -874,19 +897,20 @@ input[type=button] {
     .faq-part {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      flex-flow: row wrap;
+      align-items: stretch;
       padding: 40px 15px 60px; 
     }
     .faq-section .faq-part article{
-      width: 45%;
+      width: 40%;
     }
     .faq-part h2 {
-      width: 100%;
       font-size: 3em;
     }
     .faq-part h3 {
       font-size: 1.125em;
+    }
+    .faq-part p {
+      font-size: 0.875em;
     }
 }
 @media print,
