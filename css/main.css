@@ -222,11 +222,17 @@ footer .social-icons p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color:#425846;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
 footer .copyright {
   padding: 20px 0;
 }
-
+footer .social-icons i {
+  font-size: 1.3125em;
+}
 /* ====== Mobile Styles ====== */
 
 /* hero seciton */
